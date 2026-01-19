@@ -1,0 +1,88 @@
+/*=============== HOME ===============*/
+.home{
+   &__container{
+      position: relative;
+      padding-top: 3rem;
+      row-gap: 0;
+   }
+   &__title{
+      color: var(--white-color);
+      font-size: var(--biggest-font-size);
+      font-weight: var(--font-semi-bold);
+      text-align: center;
+   }
+   &__images{
+      position: relative;
+      display: grid;
+      justify-items: center;
+      justify-self: center;
+   }
+   &__shape{
+      width: 280px;
+      height: 280px;
+      background-color: var(--first-color);
+      border-radius: 50%;
+      clip-path: inset(50% 0 0 0);
+   }
+   &__images img{
+      position: absolute;
+   }
+   &__coffee{
+      width: 160px;
+      top: -3.5rem;
+      rotate: 10deg;
+   }
+   &__splash{
+      max-width: initial;
+      width: 350px;
+      rotate: 10deg;
+      left: -3rem;
+      bottom: .5rem;
+   }
+   &__bean-1,
+   &__bean-2{
+      width: 40px;
+   }
+   &__bean-1{
+      left: 1.5rem;
+      top: 1.5rem;
+   }
+   &__bean-2{
+      right: 3.5rem;
+      bottom: 6.5rem;
+      rotate: -90deg;
+      filter: blur(2px);
+   }
+   &__ice-1{
+      width: 50px;
+      left: 1.5rem;
+      bottom: 3rem;
+   }
+   &__ice-2{
+      width: 40px;
+      top: 4rem;
+      right: 1.25rem;
+      rotate: 60deg;
+   }
+   &__leaf{
+      width: 50px;
+      right: 6rem;
+      bottom: -1rem;
+      rotate: -15deg;
+   }
+   &__sticker{
+      position: absolute;
+      width: 50px;
+      right: .5rem;
+      top: 29rem;
+      rotate: 15deg;
+   }
+   &__data{
+      margin-top: 2.5rem;
+      text-align: center;
+   }
+   &__description{
+      color: var(--white-color);
+      margin-bottom: 1.5rem;
+   }
+}

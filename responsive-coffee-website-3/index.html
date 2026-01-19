@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <!--=============== FAVICON ===============-->
+   <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
+
+   <!--=============== REMIXICONS ===============-->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+
+   <!--=============== SWIPER CSS ===============-->
+   <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+
+   <!--=============== CSS ===============-->
+   <link rel="stylesheet" href="assets/css/styles.css">
+
+   <title>Coffee website</title>
+</head>
+
+<body>
+   <!--==================== HEADER ====================-->
+   <header class="header" id="header">
+      <nav class="nav container">
+         <a href="#" class="nav__logo">
+           <img src="assets/img/logo-removebg-preview.png" alt="BruCoffee Logo" class="nav__logo-img">
+           BRUCOFFEE <!-- Optional: Keep text if you want logo + text -->
+         </a>
+         <div class="nav__menu" id="nav-menu">
+            <ul class="nav__list">
+               
+               <li>
+                  <a href="#home" class="nav__link active-link">HOME</a>
+               </li>
+
+               <li>
+                  <a href="#popular" class="nav__link">POPULAR</a>
+               </li>
+
+               <li>
+                  <a href="#about" class="nav__link">ABOUT US</a>
+               </li>
+
+               <li>
+                  <a href="#products" class="nav__link">PRODUCTS</a>
+               </li>
+
+               <li>
+                  <a href="#contact" class="nav__link">CONTACT</a>
+               </li>
+               <!-- Inside the nav__list -->
+               <li>
+                  <a href="#" class="nav__link" id="authTrigger">LOGIN/SIGN UP</a>
+               </li>
+               <li>
+                  <a href="#cart" class="nav__link" id="cartTrigger">
+                    CART <span id="cartCount">0</span>
+                  </a>
+                </li>
+                <!-- Cart Modal -->
+<div id="cartModal" class="modal">
+   <div class="modal-content">
+     <div class="modal-header">
+       <h2>Your Order</h2>
+       <span class="close-modal">&times;</span>
+     </div>
+     <div class="modal-body">
+       <div id="cartItems"></div>
+       <div id="cartTotals">
+         <div class="total-row">
+           <span>Subtotal:</span>
+           <span id="subtotal">₹0</span>
+         </div>
+         <div class="total-row">
+           <span>GST (18%):</span>
+           <span id="gst">₹0</span>
+         </div>
+         <div class="total-row grand-total">
+           <span>Total:</span>
+           <span id="grandTotal">₹0</span>
+         </div>
+       </div>
+       <div class="address-section">
+         <label>Delivery Address:</label>
+         <textarea id="deliveryAddress" rows="4"></textarea>
+       </div>
+       <button id="placeOrder" class="button">Place Order</button>
+     </div>
+   </div>
+ </div>
+            </ul>
+
+            <!-- Close button -->
+            <div class="nav__close" id="nav-close">
+               <i class="ri-close-large-line"></i>
+            </div>
+         </div>
+
+         <!-- Toggle button -->
+         <div class="nav__toggle" id="nav-toggle">
+            <i class="ri-apps-2-fill"></i>
+         </div>
+      </nav>
+   </header>
+
+   <!--==================== MAIN ====================-->
+   <main class="main">
+      <!--==================== HOME ====================-->
+      <section class="home section" id="home">
+         <div class="home__container container grid">
+            <h1 class="home__title">BRU COFFEE</h1>
+
+            <div class="home__images">
+               <div class="home__shape"></div>
+               <img src="assets/img/home-splash.png" alt="image" class="home__splash">
+               <img src="assets/img/bean-img.png" alt="image" class="home__bean-2">
+               <img src="assets/img/home-coffee.png" alt="image" class="home__coffee">
+               <img src="assets/img/bean-img.png" alt="image" class="home__bean-1">
+               <img src="assets/img/ice-img.png" alt="image" class="home__ice-1">
+               <img src="assets/img/ice-img.png" alt="image" class="home__ice-2">
+               <img src="assets/img/leaf-img.png" alt="image" class="home__leaf">
+            </div>
+
+            <img src="assets/img/home-sticker.svg" alt="image" class="home__sticker">
+
+            <div class="home__data">
+               <p class="home__description">
+                  Find delicious hot and cold coffees with the
+                  best varieties, calm the pleasure and enjoy
+                  a good coffee, order now.
+               </p>
+
+               <a href="#about" class="button">Learn More</a>
+            </div>
+         </div>
+      </section>
+
+      <!--==================== POPULAR ====================-->
+      <section class="popular section" id="popular">
+         <div class="popular__container container">
+            <h2 class="section__title">POPULAR <br> CREATIONS</h2>
+
+            <div class="popular__swiper swiper">
+               <div class="swiper-wrapper">
+                  <article class="popular__card swiper-slide">
+                     <div class="popular__images">
+                        <div class="popular__shape"></div>
+                        <img src="assets/img/bean-img.png" alt="image" class="popular__bean-1">
+                        <img src="assets/img/bean-img.png" alt="image" class="popular__bean-2">
+                        <img src="assets/img/bru-1.png" alt="image" id="bru-1" class="popular__coffee">
+                     </div>
+
+                     <div class="popular__data">
+                        <h2 class="popular__name">BREW INSTANT</h2>
+
+                        <p class="popular__description">
+                           Indulge in the simplicity of our delicious brew coffee.
+                        </p>
+
+                        
+                     </div>
+                  </article>
+                  
+                  <article class="popular__card swiper-slide">
+                     <div class="popular__images">
+                        <div class="popular__shape"></div>
+                        <img src="assets/img/bean-img.png" alt="image" class="popular__bean-1">
+                        <img src="assets/img/bean-img.png" alt="image" class="popular__bean-2">
+                        <img src="assets/img/bru-2.png" alt="image" id="bru-2" class="popular__coffee">
+                     </div>
+
+                     <div class="popular__data">
+                        <h2 class="popular__name">BRU GOLD</h2>
+
+                        <p class="popular__description">
+                           Indulge in the simplicity of our delicious cold brew coffee.
+                        </p>
+
+                     </div>
+                  </article>
+
+                  <article class="popular__card swiper-slide">
+                     <div class="popular__images">
+                        <div class="popular__shape"></div>
+                        <img src="assets/img/bean-img.png" alt="image" class="popular__bean-1">
+                        <img src="assets/img/bean-img.png" alt="image" class="popular__bean-2">
+                        <img src="assets/img/bru-3.png" alt="image" id="bru-3" class="popular__coffee">
+                     </div>
+
+                     <div class="popular__data">
+                        <h2 class="popular__name">BRU INSTANT</h2>
+
+                        <p class="popular__description">
+                           Indulge in the simplicity of our delicious classic brew coffee.
+                        </p>
+
+                        <!--<a href="#products" class="button button-dark">Order now: ₹299</a> -->
+                     </div>
+                  </article>
+               </div>
+            </div>
+         </div>
+      </section>
+
+<!--==================== ABOUT ====================-->
+<section class="about section" id="about">
+   <div class="about__container container grid">
+      <div class="about__data">
+         <h2 class="section__title animate-pop-in">LEARN MORE <br> ABOUT US</h2>
+         <p class="about__description slide-in-left">
+            Welcome to BruCoffee, where coffee is pure passion.
+            From bean to cup, we are dedicated to delivering
+            excellence in every sip. Join us on a journey of
+            flavor and quality, crafted with love to create the
+            ultimate coffee experience.
+         </p>
+
+         <a href="#popular" class="button pulse">The Best Coffees</a>
+      </div>
+
+      <div class="about__images">
+         <div class="about__shape scale-up-center"></div>
+         <img src="assets/img/leaf-img.png" alt="image" class="about__leaf-1 float">
+         <img src="assets/img/leaf-img.png" alt="image" class="about__leaf-2 float-delayed">
+         <img src="assets/img/about-coffee.png" alt="image" class="about__coffee slide-in-right">
+      </div>
+   </div>
+
+   
+</section>
+      <!--==================== PRODUCTS ====================-->
+      <section class="products section" id="products">
+         <h2 class="section__title">BEST <br> SELLERS</h2>
+
+         <div class="products__container container grid">
+            <article class="products__card">
+               <div class="products__images">
+                  <div class="products__shape"></div>
+                  <img src="assets/img/ice-img.png" alt="image" class="products__ice-1">
+                  <img src="assets/img/ice-img.png" alt="image" class="products__ice-2">
+                  <img src="assets/img/bri-4.png" alt="image" id="bri-4" class="products__coffee">
+               </div>
+
+               <div class="products__data">
+                  <h3 class="products__name">BRU INSTANT</h3>
+
+                  <span class="products__price">₹459</span>
+
+                  <button class="products__button">
+                     <i class="ri-shopping-bag-3-fill"></i>
+                  </button>
+                  <div class="modal">
+                     <div class="modal-content">
+                        <div class="modal-header">
+                           <h2>BRU INSTANT</h2>
+                           <span class="close-modal">&times;</span>
+                        </div>
+                        <div class="modal-body">
+                           <div class="ingredients">
+                              <h3>Ingredients:</h3>
+                              <ul>
+                                 <li>Freshly brewed coffee</li>
+                                 <li>Arabica beans</li>
+                              </ul>
+                           </div>
+                           <form class="order-form">
+                              
+                              <label for="quantity">Quantity:
+                                 <input type="number" id="quantity" name="quantity" min="1" max="10" value="1">
+                              </label>
+                              <button type="submit" class="submit-order">Add to Cart</button>
+                           </form>
+                        </div>
+                     </div>
+                  </div>
+
+               </div>
+            </article>
+
+            <article class="products__card">
+               <div class="products__images">
+                  <div class="products__shape"></div>
+                  <img src="assets/img/ice-img.png" alt="image" class="products__ice-1">
+                  <img src="assets/img/ice-img.png" alt="image" class="products__ice-2">
+                  <img src="assets/img/bru-5.png" alt="image" id="bru-5" class="products__coffee">
+               </div>
+
+               <div class="products__data">
+                  <h3 class="products__name">BRU SUPER STRONG</h3>
+
+                  <span class="products__price">₹299</span>
+
+                  <button class="products__button" >
+                     <i class="ri-shopping-bag-3-fill"></i>
+                  </button>
+
+                  <div class="modal">
+                     <div class="modal-content">
+                        <div class="modal-header">
+                           <h2>BRU SUPER STRONG</h2>
+                           <span class="close-modal">&times;</span>
+                        </div>
+                        <div class="modal-body">
+                           <div class="ingredients">
+                              <h3>Ingredients:</h3>
+                              <ul>
+                                 <li>Freshly brewed coffee</li>
+                                 <li>Chicory</li>
+                              </ul>
+                           </div>
+                           <form class="order-form">
+                              
+                              <label for="quantity">Quantity:
+                                 <input type="number" id="quantity" name="quantity" min="1" max="10" value="1">
+                              </label>
+                              <button type="submit" class="submit-order">Add to Cart</button>
+                           </form>
+                        </div>
+                     </div>
+                  </div>
+
+
+
+               </div>
+            </article>
+
+            <article class="products__card">
+               <div class="products__images">
+                  <div class="products__shape"></div>
+                  <img src="assets/img/ice-img.png" alt="image" class="products__ice-1">
+                  <img src="assets/img/ice-img.png" alt="image" class="products__ice-2">
+                  <img src="assets/img/bru-cold-coffee-removebg-preview.png" alt="image" id="bru-6" class="products__coffee">
+               </div>
+
+               <div class="products__data">
+                  <h3 class="products__name">COLD COFFEE CARAMEL</h3>
+
+                  <span class="products__price">₹90</span>
+
+                  <button class="products__button" >
+                     <i class="ri-shopping-bag-3-fill"></i>
+                  </button>
+                  <div class="modal">
+                     <div class="modal-content">
+                        <div class="modal-header">
+                           <h2>BRU SUPER STRONG</h2>
+                           <span class="close-modal">&times;</span>
+                        </div>
+                        <div class="modal-body">
+                           <div class="ingredients">
+                              <h3>Ingredients:</h3>
+                              <ul>
+                                 <li>Coffee</li>
+                                 <li>Milk </li>
+                                 <li>Sugar</li>
+                              </ul>
+                           </div>
+                           <form class="order-form">
+                              
+                              <label for="quantity">Quantity:
+                                 <input type="number" id="quantity" name="quantity" min="1" max="10" value="1">
+                              </label>
+                              <button type="submit" class="submit-order">Add to Cart</button>
+                           </form>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </article>
+
+            <article class="products__card">
+               <div class="products__images">
+                  <div class="products__shape"></div>
+                  <img src="assets/img/ice-img.png" alt="image" class="products__ice-1">
+                  <img src="assets/img/ice-img.png" alt="image" class="products__ice-2">
+                  <img src="assets/img/products-coffee-4.png" alt="image" class="products__coffee">
+               </div>
+
+               <div class="products__data">
+                  <h3 class="products__name">COFFEE WITH MILK</h3>
+
+                  <span class="products__price">₹99</span>
+
+                  <button class="products__button">
+                     <i class="ri-shopping-bag-3-fill"></i>
+                  </button>
+                  <div class="modal">
+                     <div class="modal-content">
+                        <div class="modal-header">
+                           <h2>COFFEE WITH MILK</h2>
+                           <span class="close-modal">&times;</span>
+                        </div>
+                        <div class="modal-body">
+                           <div class="ingredients">
+                              <h3>Ingredients:</h3>
+                              <ul>
+                                 <li>Freshly brewed coffee</li>
+                                 <li>Fresh cream</li>
+                                 <li>Optional sugar</li>
+                              </ul>
+                           </div>
+                           <form class="order-form">
+                              <label for="size">Size:
+                                 <select id="size" name="size">
+                                    <option value="small">Small - ₹299</option>
+                                    <option value="medium">Medium - ₹350 </option>
+                                    <option value="large">Large - ₹399</option>
+                                 </select>
+                              </label>
+                              <label for="sugar">Sugar:
+                                 <select id="sugar" name="sugar">
+                                    <option value="none">No Sugar</option>
+                                    <option value="light">Light Sugar</option>
+                                    <option value="medium">Medium Sugar</option>
+                                    <option value="sweet">Extra Sweet</option>
+                                 </select>
+                              </label>
+                              <label for="quantity">Quantity:
+                                 <input type="number" id="quantity" name="quantity" min="1" max="10" value="1">
+                              </label>
+                              <button type="submit" class="submit-order">Add to Cart</button>
+                           </form>
+                        </div>
+                     </div>
+                  </div>
+
+               </div>
+            </article>
+
+            <article class="products__card">
+               <div class="products__images">
+                  <div class="products__shape"></div>
+                  <img src="assets/img/ice-img.png" alt="image" class="products__ice-1">
+                  <img src="assets/img/ice-img.png" alt="image" class="products__ice-2">
+                  <img src="assets/img/products-coffee-5.png" alt="image" class="products__coffee">
+               </div>
+
+               <div class="products__data">
+                  <h3 class="products__name">CLASSIC ICED COFFEE</h3>
+
+                  <span class="products__price">₹399</span>
+
+                  <button class="products__button">
+                     <i class="ri-shopping-bag-3-fill"></i>
+                  </button>
+                  <div class="modal">
+                     <div class="modal-content">
+                        <div class="modal-header">
+                           <h2>CLASSIC ICED COFFEE</h2>
+                           <span class="close-modal">&times;</span>
+                        </div>
+                        <div class="modal-body">
+                           <div class="ingredients">
+                              <h3>Ingredients:</h3>
+                              <ul>
+                                 <li>Freshly brewed coffee</li>
+                                 <li>Fresh cream</li>
+                                 <li>Optional sugar</li>
+                              </ul>
+                           </div>
+                           <form class="order-form">
+                              <label for="size">Size:
+                                 <select id="size" name="size">
+                                    <option value="small">Small - ₹299</option>
+                                    <option value="medium">Medium - ₹350 </option>
+                                    <option value="large">Large - ₹399</option>
+                                 </select>
+                              </label>
+                              <label for="sugar">Sugar:
+                                 <select id="sugar" name="sugar">
+                                    <option value="none">No Sugar</option>
+                                    <option value="light">Light Sugar</option>
+                                    <option value="medium">Medium Sugar</option>
+                                    <option value="sweet">Extra Sweet</option>
+                                 </select>
+                              </label>
+                              <label for="quantity">Quantity:
+                                 <input type="number" id="quantity" name="quantity" min="1" max="10" value="1">
+                              </label>
+                              <button type="submit" class="submit-order">Add to Cart</button>
+                           </form>
+                        </div>
+                     </div>
+                  </div>
+
+               </div>
+            </article>
+
+            <article class="products__card">
+               <div class="products__images">
+                  <div class="products__shape"></div>
+                  <img src="assets/img/ice-img.png" alt="image" class="products__ice-1">
+                  <img src="assets/img/ice-img.png" alt="image" class="products__ice-2">
+                  <img src="assets/img/products-coffee-6.png" alt="image" class="products__coffee">
+               </div>
+
+               <div class="products__data">
+                  <h3 class="products__name">ICED COFFEE FRAPPE</h3>
+
+                  <span class="products__price">₹399</span>
+
+                  <button class="products__button">
+                     <i class="ri-shopping-bag-3-fill"></i>
+                  </button>
+                  <div class="modal">
+                     <div class="modal-content">
+                        <div class="modal-header">
+                           <h2>ICED COFFEE FRAPPE</h2>
+                           <span class="close-modal">&times;</span>
+                        </div>
+                        <div class="modal-body">
+                           <div class="ingredients">
+                              <h3>Ingredients:</h3>
+                              <ul>
+                                 <li>Freshly brewed coffee</li>
+                                 <li>Fresh cream</li>
+                                 <li>Optional sugar</li>
+                              </ul>
+                           </div>
+                           <form class="order-form">
+                              <label for="size">Size:
+                                 <select id="size" name="size">
+                                    <option value="small">Small - ₹299</option>
+                                    <option value="medium">Medium - ₹350 </option>
+                                    <option value="large">Large - ₹399</option>
+                                 </select>
+                              </label>
+                              <label for="sugar">Sugar:
+                                 <select id="sugar" name="sugar">
+                                    <option value="none">No Sugar</option>
+                                    <option value="light">Light Sugar</option>
+                                    <option value="medium">Medium Sugar</option>
+                                    <option value="sweet">Extra Sweet</option>
+                                 </select>
+                              </label>
+                              <label for="quantity">Quantity:
+                                 <input type="number" id="quantity" name="quantity" min="1" max="10" value="1">
+                              </label>
+                              <button type="submit" class="submit-order">Add to Cart</button>
+                           </form>
+                        </div>
+                     </div>
+                  </div>
+
+               </div>
+            </article>
+         </div>
+      </section>
+
+      <!--==================== CONTACT ====================-->
+      <section class="contact section" id="contact">
+         <h2 class="section__title">CONTACT US</h2>
+
+         <div class="contact__container container grid">
+            <div class="contact__info grid">
+               <div>
+                  <h3 class="contact__title">Write Us</h3>
+
+                  <div class="contact__social">
+                     <a href="https://api.whatsapp.com/send?phone=51123456789&text=Hello, more information!"
+                        target="_blank" class="contact__social-link">
+                        <i class="ri-whatsapp-fill"></i>
+                     </a>
+
+                     <a href="https://m.me/bedimcode" target="_blank" class="contact__social-link">
+                        <i class="ri-messenger-fill"></i>
+                     </a>
+
+                     <a href="https://t.me/telegram" target="_blank" class="contact__social-link">
+                        <i class="ri-telegram-2-fill"></i>
+                     </a>
+                  </div>
+               </div>
+
+               <div>
+                  <h3 class="contact__title">Location</h3>
+
+                  <address class="contact__address">
+                     Sector- 35 <br>
+                     Chandigarh
+                  </address>
+
+                  <a href="https://maps.app.goo.gl/5Q6NHpxhEwkTEtgL9" target="_blank" class="contact__map">
+                     <i class="ri-map-pin-fill"></i>
+                     <span>View On Map</span>
+                  </a>
+               </div>
+            </div>
+
+            <div class="contact__info grid">
+               <div>
+                  <h3 class="contact__title">Delivery</h3>
+
+                  <address class="contact__address">
+                     +91-9876255549 <br>
+                     +91-9417952647
+                  </address>
+               </div>
+
+               <div>
+                  <h3 class="contact__title">Attention</h3>
+
+                  <address class="contact__address">
+                     Monday - Sunday <br> 9AM - 10PM
+                  </address>
+               </div>
+            </div>
+
+            <div class="contact__images">
+               <div class="contact__shape"></div>
+               <img src="assets/img/contact-delivery.png" alt="image" class="contact__delivery">
+            </div>
+         </div>
+      </section>
+   </main>
+
+   <!--==================== FOOTER ====================-->
+   <footer class="footer">
+      <div class="footer__container container grid">
+         <div>
+            <h3 class="footer__title">Social</h3>
+
+            <div class="footer__social">
+               <a href="https://www.facebook.com/brucoffee/videos/" target="_blank" class="footer__social-link">
+                  <i class="ri-facebook-circle-fill"></i>
+               </a>
+
+               <a href="https://www.instagram.com/brucoffeein/" target="_blank" class="footer__social-link">
+                  <i class="ri-instagram-fill"></i>
+               </a>
+
+               <a href="https://x.com/brucoffeein" target="_blank" class="footer__social-link">
+                  <i class="ri-twitter-x-line"></i>
+               </a>
+            </div>
+         </div>
+
+         <div>
+            <h3 class="footer__title">Trusted Partners</h3>
+
+            <div class="footer__pay">
+               <img src="assets/img/image.png" alt="image" class="footer__pay-card">
+
+            </div>
+         </div>
+
+         <div>
+            <h3 class="footer__title">Subscribe For News Letter</h3>
+
+            <form action="" class="footer__form">
+               <input type="email" placeholder="Email" class="footer__input">
+               <button type="submit" class="footer__button button">Subscribe</button>
+            </form>
+         </div>
+      </div>
+
+      <span class="footer__copy">
+         &#169; All Rights Reserved By Bru Coffee
+      </span>
+   </footer>
+
+   <!--========== SCROLL UP ==========-->
+   <a href="#" class="scrollup" id="scroll-up">
+      <i class="ri-arrow-up-line"></i>
+   </a>
+
+   <!--=============== SCROLLREVEAL ===============-->
+   <script src="assets/js/scrollreveal.min.js"></script>
+
+   <!--=============== SWIPER JS ===============-->
+   <script src="assets/js/swiper-bundle.min.js"></script>
+
+   <!--=============== MAIN JS ===============-->
+   <script src="assets/js/main.js"></script>
+
+
+
+
+
+<!-- Sign up/ login -->
+<div id="authModal" class="modal">
+   <div class="modal-content">
+     <div class="modal-header">
+       <h2>Welcome to BruCoffee</h2>
+       <span class="close-modal">&times;</span>
+     </div>
+     <div class="modal-body">
+       <div class="auth-tabs">
+         <button class="tab-link active" data-tab="login">Login</button>
+         <button class="tab-link" data-tab="signup">Sign Up</button>
+       </div>
+       
+       <form id="loginForm" class="auth-form active">
+         <div class="input-group">
+           <input type="email" id="loginEmail" placeholder="Email" required>
+           <span class="error-message" aria-live="polite"></span>
+         </div>
+         
+         <div class="input-group">
+           <input type="password" id="loginPassword" placeholder="Password" required minlength="6">
+           <span class="error-message" aria-live="polite"></span>
+         </div>
+         
+         <button type="submit" class="button">Login</button>
+       </form>
+       
+       <form id="signupForm" class="auth-form">
+         <div class="input-group">
+           <input type="text" id="signupName" placeholder="Name" required>
+           <span class="error-message"></span>
+         </div>
+         
+         <div class="input-group">
+           <input type="email" id="signupEmail" placeholder="Email" required>
+           <span class="error-message"></span>
+         </div>
+         
+         <div class="input-group">
+           <input type="password" id="signupPassword" placeholder="Password" required minlength="8">
+           <span class="error-message"></span>
+         </div>
+         
+         <button type="submit" class="button">Create Account</button>
+       </form>
+     </div>
+   </div>
+ </div>
+
+ <!-- Add this modal after the auth modal -->
+<div id="popularModal" class="modal">
+   <div class="modal-content">
+     <div class="modal-header">
+       <h2>Select Quantity</h2>
+       <span class="close-modal">&times;</span>
+     </div>
+     <div class="modal-body">
+       <form id="popularOrderForm">
+         <div class="input-group">
+           <label for="popularQuantity">Quantity:</label>
+           <input type="number" id="popularQuantity" name="quantity" 
+                  min="1" max="10" value="1" required>
+         </div>
+         <button type="submit" class="button">Add to Cart</button>
+       </form>
+     </div>
+   </div>
+ </div>
+
+</body>
+
+</html>

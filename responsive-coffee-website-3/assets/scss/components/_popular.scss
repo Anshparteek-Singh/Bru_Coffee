@@ -1,0 +1,73 @@
+/*=============== POPULAR ===============*/
+.popular{
+   background-color: var(--body-white-color);
+
+   & .section__title{
+      color: var(--title-color);
+   }
+   &__swiper{
+      padding-top: 1.5rem;
+   }
+   &__card{
+      width: 270px;
+      display: grid;
+      row-gap: 1.5rem;
+   }
+   &__images{
+      position: relative;
+      display: grid;
+      justify-items: center;
+      justify-self: center;
+   }
+   &__shape{
+      width: 195px;
+      height: 195px;
+      background-color: var(--first-color);
+      border-radius: 50%;
+      clip-path: inset(50% 0 0 0);
+   }
+   &__images img{
+      position: absolute;
+   }
+   &__coffee{
+      width: 130px;
+      top: -1.5rem;
+   }
+   &__bean-1{
+      width: 30px;
+      top: 3rem;
+      left: .5rem;
+      transition: transform .5s .1s;
+   }
+   &__bean-2{
+      width: 20px;
+      right: 2rem;
+      bottom: 2rem;
+      rotate: 75deg;
+      filter: blur(1px);
+      transition: transform .5s .1s;
+   }
+   &__data{
+      text-align: center;
+   }
+   &__name{
+      font-size: var(--h1-font-size);
+      color: var(--title-color);
+      margin-bottom: .5rem;
+   }
+   &__description{
+      margin-bottom: 1.5rem;
+   }
+   &__card:hover &__bean-1{
+      transform: translate(-.5rem, -.25rem);
+   }
+   &__card:hover &__bean-2{
+      transform: translate(.5rem, -.25rem);
+   }
+}
+
+/* Swiper class */
+.swiper{
+   overflow: visible;
+   margin-inline: initial;
+}
